@@ -28,6 +28,10 @@ const bookSchema = new Schema({
     fileName: {
         type: String,
         require: true
+    },
+    fileBook: {
+        type: String,
+        require: null
     }
 })
 

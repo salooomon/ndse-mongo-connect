@@ -23,7 +23,7 @@ services:
     depends_on:
       - storage
   library:
-    image: kirill000/library:v1.0.0
+    image: kirill000/library:v2.0.0
     ports:
       - 3001:3001
     environment:
