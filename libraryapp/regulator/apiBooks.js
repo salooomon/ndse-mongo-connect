@@ -1,7 +1,4 @@
 const Book = require('../models/book');
-const {v4: uuid} = require('uuid');
-
-const uuId = uuid();
 
 // Получение всех книг
 const getBooks = (req, res) => {
@@ -29,7 +26,6 @@ const getBook = async (req, res) => {
 // Создание книги с последующим возвращением книги
 const createBook = (req, res) => {
     const {
-        id = uuId,
         title,
         description,
         authors,
@@ -44,7 +40,6 @@ const createBook = (req, res) => {
     };
 
     Book.create({
-        id,
         title,
         description,
         authors,

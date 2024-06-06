@@ -1,10 +1,6 @@
 const {Schema, model} = require('mongoose');
 
 const bookSchema = new Schema({
-    id: {
-        type: String,
-        require: true
-    },
     title: {
         type: String,
         require: true

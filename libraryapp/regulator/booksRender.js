@@ -1,9 +1,6 @@
 const saveBook = require('../other/saveBooks');
 const Book = require('../models/book');
 
-const {v4: uuid} = require('uuid');
-
-const uuId = uuid();
 
 const PORT = process.env.CNT_PORT || 3000;
 const BASE_URL = process.env.BASE_URL || "http://counter";
@@ -34,7 +31,6 @@ const RenderPageCreateBook = (req, res) => {
 
 const createPage = (req, res) => {
     const {
-        id = uuId,
         title,
         description,
         authors,
@@ -49,7 +45,6 @@ const createPage = (req, res) => {
     };
 
     Book.create({
-        id,
         title,
         description,
         authors,

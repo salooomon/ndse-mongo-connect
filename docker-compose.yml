@@ -30,5 +30,8 @@ services:
       - PORTS=3001
       - CNT_PORT=3000
       - REDIS_URL=redis://storage
+      - DB_URL=mongodb://root:example@mongo:27017
     depends_on:
       - counter
+      - mongo
+      - mongo
